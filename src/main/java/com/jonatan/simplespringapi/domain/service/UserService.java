@@ -51,7 +51,7 @@ public class UserService implements IUserService, UserDetailsService {
     @Override
     public User saveUser(User user) {
         if( user.getRoles().isEmpty() ){
-            List<Role> roles = new ArrayList();
+            List<Role> roles = new ArrayList<>();
             roles.add(roleService.getRole("USER").get());
             user.setRoles(roles);
         }
